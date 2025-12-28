@@ -16,7 +16,7 @@ Clock divider configuration:
 * Connect SYSCLK to CLKIN <img src="img/mintz80_r5_sysclk_src.png" alt="SYSCLK to CLKIN">
 
 # Timers
-T23SRC should really be called T0SRC. This is addressed in Rev6. Boards prior to this Rev have T23SRC where T0SRC should be.
+T0SRC was mistakenly labeled T23SRC in Rev5 and TRG1 in Rev2.
 
 SIO A and B baud rate is determined by clock dividers CTC3 and CTC2 correspondingly. CTC channels 2 and 3 can be drivven from:
 * their own crystal - mount SIO OSC and leave T0SRC disconnected <img src="img/mintz80_r5_CTC_CLK.png" alt="T23SRC to OSC">
@@ -24,15 +24,15 @@ SIO A and B baud rate is determined by clock dividers CTC3 and CTC2 correspondin
 * use a jumper wire to bypass center pad of T0SRC and connect two outer pads. Do not populate SIO OSC! This will feed TRG3 and TRG2 from SYSCLK while leaving TRG0 not connected here.
 
 TRG0:
-* Can be fed frequency from SIO OSC or from SYSCLK using T0SRC(T23SRC) jumper pads.
-* If jumpered to TRG1  - from the same source as TRG1. A jumper for this was added in Rev6. Prior to this a wire jumper can be added between pins TRG0 and TRG1.
+* Can be fed frequency from SIO OSC or from SYSCLK using T0SRC(T23SRC/TRG1) jumper pads.
+* If jumpered to TRG1  - from the same source as TRG1. A jumper for this was added in Rev6. Prior to this a wire jumper can be added between pins TRG0 and TRG1 or between T23SRC/TRG1 pad and TRG1 connector pin, whichever is easier.
 * Lastly, center pad of T0SRC can be wire-jumpered anywhere else on the board as convenient.
 
 In Rev5 PCB, TRG1 only has a jumper to connect it to TC0 output or to TRG1 pin on main connector.This is sufficient for many uses:
 * Daisy-chain TRG1 to TC0 to use as clock - use TC0 to output a pulse on TC0 on every millisecond. TC0 will also generate an interrupt at the same cadence to provide millisecond timer. Configure TC1 to generate interrupt for every 10 or 100 pulses received from TC0 and in ISR implement routine to have a clock with 10 or 100ms resolution.
 * Drive TRG1 from some circuit on daughter board, e.g. CF card through pin TRG1 and have this trigger an ISR to handle event.
 
-More flexibility is allowed by adding a jumper to drive TRG1 input from the same clock as TRG0. Option to do so was aded to Rev6 board. In Rev5 PCB this is easily done by installing a jumper between pins TRG1 and TRG0.
+More flexibility is allowed by adding a jumper to drive TRG1 input from the same clock as TRG0. Option to do so was aded to Rev6 board. In Rev5 PCB this is easily done by installing a jumper between pins TRG1 and TRG0 as mentioned above.
 
 # Releases
 * [Rev 1](REV1.md)
@@ -40,6 +40,7 @@ More flexibility is allowed by adding a jumper to drive TRG1 input from the same
 * [Rev 3](REV3.md)
 * [Rev 4](REV4.md)
 * [Rev 5](REV5.md)
+
 
 
 
