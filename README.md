@@ -1,6 +1,8 @@
 # mintz80_main_pcb
 Main PCB for MintZ80
 
+Big THANKS to PCBWay for sponsoring this project by building Rev5 board for me!  PCB for this design can be purchased from PCBWay [here](https://www.pcbway.com/project/shareproject/MintZ80_r5_ffefebef.html). This board can be used standalone or with its daughterboard which provides CF Card slot, YMZ384 sound chip, configuration switch and some other convenience features.
+
 # Configuration
 CPU clock can be drivven from several sources depending on jumper configuration
 * from CPLD clock divider. CPLD has configurable 4 rate clock divider with division rate programmed by two lowest bits of port $D0. To use 256K of RAM with Rev5 and above board, clock divider read circuit had to be removed from CPLD to acommodate circuit for managing A17/RAMEN2. Two lowest bits of port $D0 are used to select CPU clock divider but state of it can not be read back if CPLD is configured to manage more than 128K of RAM.
@@ -110,6 +112,7 @@ Last line reminds us what is where. In this case we chose to load and run test m
 * [Rev 3](REV3.md)
 * [Rev 4](REV4.md)
 * [Rev 5](REV5.md)
+
 
 
 
