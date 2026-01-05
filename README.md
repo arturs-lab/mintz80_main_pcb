@@ -3,7 +3,7 @@ Main PCB for MintZ80
 
 Big THANKS to PCBWay for sponsoring this project by building Rev5 board for me!  PCB for this design can be purchased from PCBWay [here](https://www.pcbway.com/project/shareproject/MintZ80_r5_ffefebef.html). This board can be used standalone or with its [daughterboard](https://github.com/arturs-lab/mintz80_cf_pcb) which provides CF Card slot, YMZ384 sound chip, configuration switch and some other convenience features.
 
-Currently, a[monitor](https://github.com/arturs-lab/mintz80_monitor) and [Altair 9K Basic](https://github.com/arturs-lab/mintz80_basic8k) are available for this board. Eventually CP/M will also be available.
+Currently, a [monitor](https://github.com/arturs-lab/mintz80_monitor), [Very Tiny Language](https://github.com/arturs-lab/vtl) and [Altair 9K Basic](https://github.com/arturs-lab/mintz80_basic8k) are available for this board. Eventually CP/M will also be available.
 
 # Configuration
 CPU clock can be drivven from several sources depending on jumper configuration
@@ -114,6 +114,7 @@ Last line reminds us what is where. In this case we chose to load and run test m
 * [Rev 3](REV3.md)
 * [Rev 4](REV4.md)
 * [Rev 5](REV5.md)
+
 
 
 
