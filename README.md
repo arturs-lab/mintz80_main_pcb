@@ -1,7 +1,8 @@
 # mintz80_main_pcb
 Main PCB for MintZ80
 
-Big THANKS to PCBWay for sponsoring this project by building Rev5 board for me!  PCB for this design can be purchased from PCBWay [here](https://www.pcbway.com/project/shareproject/MintZ80_r5_ffefebef.html). This board can be used standalone or with its [daughterboard](https://github.com/arturs-lab/mintz80_cf_pcb) which provides CF Card slot, YMZ384 sound chip, configuration switch and some other convenience features.
+# PCBWay
+Big THANKS to PCBWay for sponsoring this project by building Rev5 board for me! I've been using PCBWay services for years for my PCB manufacturing needs. Their PCBs were always manufactured to the highest standards. I was very happy when they proposed collaborating on this project and manufacturing this PCB for me. And they did not disappoint! This board has some tricky routing with high tolerance, thin traces both on <a href='img/Rev5_top.jpg' alt='PCB Top'>top</a> and <a href='img/Rev5_btm.jpg' alt='PCB Bottom'>bottom</a> of the board. The product I received was of highest quality with precise traces and crisp silkscreen. Also, the whole ordering process was smooth and quick. Uploading files was easy and I had a completed product in my hands in just a few days. Thank you PCBWay! I recommend thair service to everyone! PCB for this design can be purchased from PCBWay [here](https://www.pcbway.com/project/shareproject/MintZ80_r5_ffefebef.html). This board can be used standalone or with its [daughterboard](https://github.com/arturs-lab/mintz80_cf_pcb) which provides CF Card slot, YMZ384 sound chip, configuration switch and some other convenience features.
 
 Currently, a [monitor](https://github.com/arturs-lab/mintz80_monitor), [Very Tiny Language](https://github.com/arturs-lab/vtl) and [Altair 9K Basic](https://github.com/arturs-lab/mintz80_basic8k) are available for this board. Eventually CP/M will also be available.
 
@@ -114,6 +115,7 @@ Last line reminds us what is where. In this case we chose to load and run test m
 * [Rev 3](REV3.md)
 * [Rev 4](REV4.md)
 * [Rev 5](REV5.md)
+
 
 
 
